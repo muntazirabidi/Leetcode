@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Aug 30 20:47:13 2022
+
+@author: muntazirabidi
+"""
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Robot:
+    def __init__(self, name, color, weight):
+        self.name = name
+        self.color = color
+        self.weight = weight
+        
+    
+    def introduce_self(self):
+        print('My name is '+ self.name)
+        
+        
+class Person:
+    def __init__(self, name, personality, isSitting):
+        self.name = name
+        self.personality = personality
+        self.is_Sitting = isSitting      
+        
+    def sit_down(self):
+        self.is_Sitting = True
+ 
+    def stand_up(self):
+        self.is_Sitting = False
+
+p1 = Person('Alice', 'aggressive', False)
+p2 = Person('Becky', 'talkative', True)
+
+
+r1 = Robot("Tom", 'red', 30)
+
+
+r2 = Robot('Jerry', 'blue', 40)
+
+
+r1.introduce_self()
+
+r2.introduce_self()
+
+
+p1.robot_owned = r2
+p2.robot_owned = r1
+
+print(p1.robot_owned.introduce_self())
